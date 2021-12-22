@@ -12,7 +12,7 @@ namespace ComicBookGalleryModel
     {
         public Context () : base ("ComicBookGallery")
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<Context>());
         }
 
 
