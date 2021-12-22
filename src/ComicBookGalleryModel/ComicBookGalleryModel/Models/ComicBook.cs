@@ -9,6 +9,7 @@ namespace ComicBookGalleryModel.Models
     public class ComicBook 
     {
         public int Id { get; set; }
+        public int SeriesId { get; set; } //foreign key
         public Series Series { get; set; }
         public int IssueNumber { get; set; }
         public string Description { get; set; }
