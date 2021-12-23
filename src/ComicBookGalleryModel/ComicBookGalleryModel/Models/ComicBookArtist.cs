@@ -15,8 +15,8 @@ namespace ComicBookGalleryModel.Models
         public int RoleId { get; set; } //foreign key property to the role that the artist had for this ComicBook
         
         //navigation properties
-        public ComicBook ComicBook { get; set; }
-        public Artist Artist { get; set; }
-        public Role Role { get; set; }
+        public virtual ComicBook ComicBook { get; set; }
+        public virtual Artist Artist { get; set; }
+        public virtual Role Role { get; set; }
     }
 }
