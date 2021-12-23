@@ -16,7 +16,8 @@ namespace ComicBookGalleryModel
 
                 var comicBooks = context.ComicBooks
                     .Include(cb=>cb.Series)
-                    .Where(cb=>cb.Series.Title.Contains("man"))
+                    .OrderByDescending(cb=>cb.IssueNumber)
+                    .ThenBy(cb=>cb.PublishedOn)
                     .ToList();
 
                 foreach (var comicBook in comicBooks)
